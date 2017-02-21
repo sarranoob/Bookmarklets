@@ -4,29 +4,57 @@
 		<meta charset="utf-8">
 		<title>Bookmarklets</title>
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+		<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+		<style>
+			.list-group-item:first-child,
+			.list-group-item:last-child {
+				border-radius: 0;
+			}
+			.fa {
+				font-size: 3rem;
+				margin: 0 1rem 0 0;
+			}
+			.list-group-item-action:hover {
+				border-right: 0;
+			}
+			.hidden {
+				display: none;
+			}
+		</style>
 	</head>
 	<body>
 		<div class="container pt-3">
-			<h1 class="display-1 text-center">VRTnu Bookmarklet</h1>
-			<p class="lead text-center pt-5">Get latest version here: <a class="btn btn-secondary" href="#">Better VRTnu Player</a></p>
+			<h1>VRTnu Bookmarklet</h1>
+			<h2>Step 1</h2>
+			<p>Choose the features that you want</p>
 			<div class="row">
-				<div class="col text-center">
-					<h2>Step 1</h2>
-					<p>Drag the button above to your bookmark bar</p>
+				<div class="col-md-4 pr-0">
+					<ul class="list-group">
+						<li class="option list-group-item list-group-item-action" data-val="0" data-s="true"><i class="fa fa-check-circle text-success h3" aria-hidden="true"></i> Update Tool</li>
+						<li class="option list-group-item list-group-item-action" data-val="1" data-s="true"><i class="fa fa-check-circle text-success h3" aria-hidden="true"></i> Space To Pause</li>
+						<li class="option list-group-item list-group-item-action" data-val="2" data-s="false"><i class="fa fa-times-circle-o text-muted h3" aria-hidden="true"></i> Download button</li>
+					</ul>
 				</div>
-				<div class="col text-center">
-					<h2>Step 2</h2>
-					<p>Go To a VRTnu video</p>
+				<div id="emptyDetails" class="details col-md-8 card border-left-0 rounded-0 hidden-sm-down">
 				</div>
-				<div class="col text-center">
-					<h2>Step 3</h2>
-					<p>Click on the bookmark</p>
+				<div data-val="0" class="details col-md-8 card border-left-0 rounded-0 hidden hidden-sm-down bg-faded p-3">
+					<p class="h3">Update Tool</p>
+					<p>Deze optie laat je weten wanneer er een nieuwe versie uitkomt</p>
+				</div>
+				<div data-val="1" class="details col-md-8 card border-left-0 rounded-0 hidden hidden-sm-down bg-faded p-3">
+					<p class="h3">Space To Pause</p>
+					<p>Laat je pauseren en hervatten met een druk op de spatiebalk</p>
+				</div>
+				<div data-val="2" class="details col-md-8 card border-left-0 rounded-0 hidden hidden-sm-down bg-faded p-3">
+					<p class="h3">Download Button</p>
+					<p>Geeft een downloadknop weer waarmee je de video eenvoudig kan downloaden</p>
 				</div>
 			</div>
 		</div>
 
 		<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
-		<script src="https://cdnjs.buttflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+		<script src="https://npmcdn.com/tether@1.2.4/dist/js/tether.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+		<script src="scripts.js"></script>
 	</body>
 </html>
